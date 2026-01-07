@@ -307,6 +307,12 @@
       overflow: hidden;
     }
 
+    .candidate-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .candidate-info { flex: 1; }
     .candidate-name { font-family: 'Zen Maru Gothic', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.25rem; }
 
@@ -500,6 +506,13 @@
       font-size: 2rem;
       font-weight: 700;
       border: 3px solid rgba(255,255,255,0.3);
+      overflow: hidden;
+    }
+
+    .modal-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .modal-name { font-family: 'Zen Maru Gothic', sans-serif; font-size: 1.75rem; margin-bottom: 0.5rem; }
@@ -521,7 +534,8 @@
     .compare-column { border-right: 1px solid var(--sand-warm); }
     .compare-column:last-child { border-right: none; }
     .compare-column-header { padding: 1.5rem; text-align: center; background: var(--sand-light); border-bottom: 1px solid var(--sand-warm); }
-    .compare-column-photo { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--ocean-light), var(--forest-light)); margin: 0 auto 0.75rem; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 700; color: var(--ocean-deep); }
+    .compare-column-photo { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--ocean-light), var(--forest-light)); margin: 0 auto 0.75rem; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 700; color: var(--ocean-deep); overflow: hidden; }
+    .compare-column-photo img { width: 100%; height: 100%; object-fit: cover; }
     .compare-column-name { font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem; }
     .compare-column-party { font-size: 0.8rem; color: var(--text-mid); }
     .compare-cell { padding: 1rem 1.25rem; border-bottom: 1px solid var(--sand-warm); font-size: 0.9rem; }
@@ -831,6 +845,7 @@
         id: 4,
         name: "徳安 達成",
         party: "立憲民主党",
+        photo: "picture/徳安達成.png",
         hashtags: "#サッカー好き #行政書士 #子育て中",
         spot: "白糸の滝",
         tenBillion: "駅のバリアフリー",
@@ -844,6 +859,7 @@
         id: 5,
         name: "川上 伸悟",
         party: "無所属",
+        photo: "picture/川上しんご.png",
         hashtags: "#一生懸命 #誠実 #ときどき面白いことを言う",
         spot: "伊都安蔵里さんの絶品ランチ🍽️",
         tenBillion: "小さい子からお年寄りまで何度も行きたくなる大きな公園",
@@ -857,6 +873,7 @@
         id: 6,
         name: "川俣勇介",
         party: "参政党",
+        photo: "picture/川俣勇介.png",
         hashtags: "#生真面目 #ITと法律のハイブリッド #子煩悩",
         spot: "またいちのしお",
         tenBillion: "産婦人科の誘致、病児保育施設の設置",
@@ -870,6 +887,7 @@
         id: 7,
         name: "さとうみちこ",
         party: "無所属",
+        photo: "picture/さとうみちこ.png",
         hashtags: "#みちこは女性とこどもの味方です #声を聴きます #やっているフリはしません",
         spot: "二丈岳　二丈を中心として糸島が見渡せます。季節ごとに水を張った田んぼ、青々とした田んぼ、金の麦が実っている様子が美しいです。",
         tenBillion: "質問の意図が分からないので、回答ができません。すみません。",
@@ -883,6 +901,7 @@
         id: 8,
         name: "やすまる仁史",
         party: "無所属",
+        photo: "picture/やすまる仁史.png",
         hashtags: "#元自衛官 #直球勝負 #熱意",
         spot: "火山山頂",
         tenBillion: "市民参加型予算を創設し、使い道の決定権を市民に直接解放する",
@@ -909,6 +928,7 @@
         id: 10,
         name: "松本たかと",
         party: "無所属",
+        photo: "picture/松本たかと.png",
         hashtags: "#思い立ったらすぐ行動 #わかもの・ばかものよそもの #サッカー部",
         spot: "火山",
         tenBillion: "公設民営のプレイパーク(こどもたちが自由に無料で遊べる場所)作り",
@@ -922,6 +942,7 @@
         id: 11,
         name: "中尾正俊",
         party: "公明党",
+        photo: "picture/中尾正俊.png",
         hashtags: "#真面目 #ストイック #倹約家",
         spot: "二見ヶ浦エリア",
         tenBillion: "各校区に分配し、子ども～お年寄りまで皆さんで考えていただく。",
@@ -935,6 +956,7 @@
         id: 12,
         name: "伊藤千代子",
         party: "無所属",
+        photo: "picture/伊藤千代子.png",
         hashtags: "#ミステリー好き #家族思い #仕事人間",
         spot: "海岸 朝日や夕日の時刻に、海辺を散歩すると景色がとてもきれい 海を眺めていると古代の人々がどのように生活していたか想像できる",
         tenBillion: "物価が高騰し、生活が苦しい低所得者への支援を行う 子どもや高齢者、障がい者など、教育・福祉の充実",
@@ -990,7 +1012,7 @@
             </svg>
           </button>
           <div class="card-header">
-            <div class="candidate-photo">${candidate.name.charAt(0)}</div>
+            <div class="candidate-photo">${candidate.photo ? `<img src="${candidate.photo}" alt="${candidate.name}">` : candidate.name.charAt(0)}</div>
             <div class="candidate-info">
               <h3 class="candidate-name">${candidate.name}</h3>
               <span class="candidate-party ${partyClass[candidate.party] || 'party-musho'}">${candidate.party}</span>
@@ -1143,7 +1165,12 @@
       const candidate = candidates.find(c => c.id === id);
       const modal = document.getElementById('detailModal');
 
-      document.getElementById('modalPhoto').textContent = candidate.name.charAt(0);
+      const modalPhoto = document.getElementById('modalPhoto');
+      if (candidate.photo) {
+        modalPhoto.innerHTML = `<img src="${candidate.photo}" alt="${candidate.name}">`;
+      } else {
+        modalPhoto.textContent = candidate.name.charAt(0);
+      }
       document.getElementById('modalName').textContent = candidate.name;
       document.getElementById('modalParty').textContent = candidate.party;
 
@@ -1207,7 +1234,7 @@
           ${compareData.map(c => `
             <div class="compare-column">
               <div class="compare-column-header">
-                <div class="compare-column-photo">${c.name.charAt(0)}</div>
+                <div class="compare-column-photo">${c.photo ? `<img src="${c.photo}" alt="${c.name}">` : c.name.charAt(0)}</div>
                 <div class="compare-column-name">${c.name}</div>
                 <div class="compare-column-party">${c.party}</div>
               </div>
