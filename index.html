@@ -556,6 +556,99 @@
     .candidate-card:nth-child(5) { animation-delay: 0.25s; }
     .candidate-card:nth-child(6) { animation-delay: 0.3s; }
 
+    .about-section {
+      background: var(--sand-warm);
+      border-top: 1px solid rgba(26, 95, 122, 0.1);
+    }
+
+    .about-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .about-toggle {
+      width: 100%;
+      padding: 1.25rem 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: var(--ocean-deep);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .about-toggle:hover { opacity: 0.7; }
+
+    .about-toggle-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .about-toggle.active .about-toggle-icon {
+      transform: rotate(180deg);
+    }
+
+    .about-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .about-content.active {
+      max-height: 2000px;
+    }
+
+    .about-inner {
+      padding: 0 0 2rem;
+    }
+
+    .about-headline {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 1.25rem;
+      color: var(--ocean-deep);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .about-text {
+      color: var(--text-dark);
+      line-height: 2;
+      font-size: 0.95rem;
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-signature {
+      margin-top: 2rem;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.25rem;
+    }
+
+    .about-org {
+      font-size: 0.85rem;
+      color: var(--text-mid);
+    }
+
+    .about-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ocean-deep);
+    }
+
     .site-footer {
       background: var(--ocean-deep);
       color: rgba(255,255,255,0.8);
@@ -622,6 +715,36 @@
       <div class="candidates-grid" id="candidatesGrid"></div>
     </section>
   </main>
+
+  <section class="about-section">
+    <div class="about-container">
+      <button class="about-toggle" onclick="toggleAbout()">
+        <span class="about-toggle-title">このサイトについて</span>
+        <svg class="about-toggle-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="about-content" id="aboutContent">
+        <div class="about-inner">
+          <h3 class="about-headline">私が糸島で「政治を身近にしたい」本当の理由</h3>
+          <div class="about-text">
+            <p>私が糸島で政治に関わろうとしているのは、大人のためだけではなく、子どもたちの未来のためでもあります。</p>
+            <p>今の日本では、18歳になれば誰でも、お金を払わなくても、一人一票の選挙権を持つことができます。でもこれは、最初から当たり前にあったものではありません。</p>
+            <p>昔は、選挙に行ける人が限られていた。女性や若い人には投票権がなかった。そんな時代が実際にありました。つまり今の私たちは、「街や国の方向を自分で選べる力」を、無料で与えられている状態です。</p>
+            <p>これは冷静に考えると、かなり特別で、かなり面白いことだと思っています。</p>
+            <p>一票を投じることで、誰が決める側に立つのか、税金がどこに使われるのか、子育てや教育、暮らしがどう変わるのか——そういったことに自分が関われる。街が変わる可能性に、自分の意思が含まれる。これは本来、とてもワクワクすることです。</p>
+            <p>でも今は、「政治は難しい」「どうせ変わらない」「関わらなくても生活できる」そんな空気が先に立ってしまっています。</p>
+            <p>だから私は、お母さんたちが政治を家計の延長として理解できるようにしたいし、同時に、子どもたちにも「選挙って何のためにあるのか」「投票しないという選択も、実は"選んでいる"こと」を、分かりやすく伝えたいと思っています。</p>
+            <p>政治がどうだ、国がどうだと言う前に、今の政治は「行った人」「行かなかった人」その全員の結果でできている。だったら、最初から「自分ごと」として知っていた方がいい。最初から「参加できるもの」として育っていた方がいい。</p>
+            <p>私は、政治を教えたいわけでも、思想を押し付けたいわけでもありません。ただ、「自分で街をつくれる可能性がある」「その入り口が一票なんだ」という感覚を、大人にも、子どもにも、渡したいだけです。</p>
+            <p>その積み重ねの先に、糸島市が「投票率が高いまち」ではなく、「自分たちで考え、選び、動くまち」として育っていくと考えます。</p>
+          </div>
+          <div class="about-signature">
+            <span class="about-org">みんなの選挙糸島</span>
+            <span class="about-name">代表　松田 一葉</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="site-footer">
     <p class="footer-note">
@@ -1157,6 +1280,13 @@
     });
 
     init();
+
+    function toggleAbout() {
+      const toggle = document.querySelector('.about-toggle');
+      const content = document.getElementById('aboutContent');
+      toggle.classList.toggle('active');
+      content.classList.toggle('active');
+    }
   </script>
 </body>
 </html>
