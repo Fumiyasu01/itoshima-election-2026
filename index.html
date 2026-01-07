@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>糸島市議会議員選挙 2026 - 立候補予定者アンケート</title>
+
+  <!-- OGP設定 -->
+  <meta property="og:title" content="糸島市議会議員選挙 2026 - 立候補予定者アンケート">
+  <meta property="og:description" content="2026年2月投開票の糸島市議会議員選挙。立候補予定者11名の政策スタンスや想いを比較して、あなたの一票の参考にしてください。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fumiyasu01.github.io/itoshima-election-2026/">
+  <meta property="og:image" content="https://fumiyasu01.github.io/itoshima-election-2026/ogp.png">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card設定 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="糸島市議会議員選挙 2026 - 立候補予定者アンケート">
+  <meta name="twitter:description" content="立候補予定者11名の政策スタンスを比較。投票の参考に。">
+  <meta name="twitter:image" content="https://fumiyasu01.github.io/itoshima-election-2026/ogp.png">
+
+  <!-- 一般的なメタ情報 -->
+  <meta name="description" content="2026年2月投開票の糸島市議会議員選挙。立候補予定者11名の政策スタンスや想いを比較して、あなたの一票の参考にしてください。">
+  <meta name="keywords" content="糸島市, 市議会議員選挙, 2026, 立候補者, アンケート, 投票, 選挙">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ocean-deep: #1a5f7a;
+      --ocean-mid: #57a0bc;
+      --ocean-light: #b8e0ec;
+      --sand-warm: #f5e6d3;
+      --sand-light: #faf6f1;
+      --forest-deep: #2d5a3d;
+      --forest-mid: #5a8a6a;
+      --forest-light: #a8d4b8;
+      --sunset-orange: #e67e4d;
+      --sunset-pink: #f4a7a7;
+      --text-dark: #2c3e50;
+      --text-mid: #5a6c7d;
+      --text-light: #8899a6;
+      --white: #ffffff;
+      --shadow-soft: 0 4px 20px rgba(26, 95, 122, 0.1);
+      --shadow-hover: 0 8px 30px rgba(26, 95, 122, 0.15);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Sans JP', 'Zen Maru Gothic', sans-serif;
+      background: var(--sand-light);
+      color: var(--text-dark);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-mid) 50%, var(--forest-mid) 100%);
+      padding: 3rem 1.5rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      color: var(--white);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .hero h1 {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      color: var(--white);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .hero-subtitle {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .wave-divider svg {
+      display: block;
+      width: 100%;
+      height: 60px;
+      margin-top: -1px;
+    }
+
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .filter-section {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .filter-title {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .filter-title svg { width: 18px; height: 18px; }
+
+    .filter-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+    .filter-chip {
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      border: 2px solid var(--ocean-light);
+      background: var(--white);
+      color: var(--ocean-deep);
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-chip:hover { background: var(--ocean-light); }
+    .filter-chip.active { background: var(--ocean-deep); border-color: var(--ocean-deep); color: var(--white); }
+
+    .compare-section {
+      background: linear-gradient(135deg, var(--sand-warm) 0%, var(--white) 100%);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border: 2px dashed var(--ocean-light);
+    }
+
+    .compare-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .compare-title {
+      font-size: 1rem;
+      color: var(--ocean-deep);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .compare-actions { display: flex; gap: 0.75rem; }
+
+    .btn {
+      padding: 0.6rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary { background: var(--ocean-deep); color: var(--white); }
+    .btn-primary:hover { background: var(--ocean-mid); transform: translateY(-1px); }
+    .btn-primary:disabled { background: var(--text-light); cursor: not-allowed; transform: none; }
+    .btn-secondary { background: var(--white); color: var(--text-mid); border: 1px solid var(--ocean-light); }
+    .btn-secondary:hover { background: var(--sand-light); }
+
+    .compare-slots { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .compare-slot {
+      flex: 1;
+      min-width: 150px;
+      max-width: 200px;
+      height: 80px;
+      border: 2px dashed var(--ocean-light);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      background: rgba(255,255,255,0.5);
+    }
+
+    .compare-slot.filled {
+      border-style: solid;
+      border-color: var(--ocean-mid);
+      background: var(--white);
+      padding: 0.75rem;
+      justify-content: space-between;
+    }
+
+    .compare-slot-info { display: flex; align-items: center; gap: 0.5rem; }
+
+    .compare-slot-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--ocean-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: var(--ocean-deep);
+      font-size: 0.9rem;
+    }
+
+    .compare-slot-name { font-size: 0.85rem; font-weight: 500; color: var(--text-dark); }
+
+    .compare-slot-remove {
+      background: none;
+      border: none;
+      color: var(--text-light);
+      cursor: pointer;
+      padding: 0.25rem;
+      border-radius: 50%;
+      transition: all 0.2s;
+    }
+
+    .compare-slot-remove:hover { background: var(--sunset-pink); color: var(--sunset-orange); }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .section-title { font-family: 'Zen Maru Gothic', sans-serif; font-size: 1.5rem; color: var(--ocean-deep); }
+    .candidates-count { color: var(--text-mid); font-size: 0.9rem; }
+    .candidates-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+
+    .candidate-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .candidate-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+    .candidate-card.selected { box-shadow: 0 0 0 3px var(--ocean-mid); }
+
+    .card-header {
+      padding: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--sand-warm);
+    }
+
+    .candidate-photo {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--ocean-light) 0%, var(--forest-light) 100%);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--ocean-deep);
+      font-weight: 700;
+      overflow: hidden;
+    }
+
+    .candidate-info { flex: 1; }
+    .candidate-name { font-family: 'Zen Maru Gothic', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.25rem; }
+
+    .candidate-party {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .party-komei { background: #fff3cd; color: #856404; }
+    .party-musho { background: var(--sand-warm); color: var(--text-mid); }
+    .party-rikken { background: #d4edda; color: #155724; }
+    .party-sansei { background: #f8d7da; color: #721c24; }
+
+    .candidate-hashtags { font-size: 0.8rem; color: var(--ocean-mid); line-height: 1.5; }
+
+    .card-compare-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid var(--ocean-light);
+      background: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .card-compare-btn:hover { border-color: var(--ocean-mid); background: var(--ocean-light); }
+    .card-compare-btn.selected { background: var(--ocean-deep); border-color: var(--ocean-deep); }
+    .card-compare-btn svg { width: 16px; height: 16px; stroke: var(--ocean-deep); }
+    .card-compare-btn.selected svg { stroke: var(--white); }
+
+    .card-stances { padding: 1.25rem 1.5rem; background: var(--sand-light); }
+    .stance-item { margin-bottom: 1rem; }
+    .stance-item:last-child { margin-bottom: 0; }
+    .stance-label { display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.75rem; }
+    .stance-label-left, .stance-label-right { color: var(--text-mid); }
+
+    .stance-bar {
+      height: 8px;
+      background: linear-gradient(90deg, var(--ocean-light), var(--forest-light));
+      border-radius: 4px;
+      position: relative;
+    }
+
+    .stance-marker {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 18px;
+      height: 18px;
+      background: var(--white);
+      border: 3px solid var(--ocean-deep);
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .card-content { padding: 1.25rem 1.5rem; }
+    .content-section { margin-bottom: 1rem; }
+    .content-section:last-child { margin-bottom: 0; }
+
+    .content-label {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .content-label svg { width: 14px; height: 14px; }
+    .content-text { font-size: 0.9rem; color: var(--text-dark); }
+
+    .card-footer { padding: 1rem 1.5rem; border-top: 1px solid var(--sand-warm); }
+
+    .view-detail-btn {
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--sand-light);
+      border: 1px solid var(--ocean-light);
+      border-radius: var(--radius-sm);
+      color: var(--ocean-deep);
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .view-detail-btn:hover { background: var(--ocean-light); }
+
+    /* Expandable Text */
+    .expandable-text { position: relative; }
+    .expandable-text .text-content { white-space: pre-line; }
+    .expandable-text.collapsed .text-content {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .expand-btn {
+      background: none;
+      border: none;
+      color: var(--ocean-deep);
+      font-weight: 500;
+      cursor: pointer;
+      padding: 0.5rem 0;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .expand-btn:hover { text-decoration: underline; }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 1rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-overlay.active { opacity: 1; visibility: visible; }
+
+    .modal {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      max-width: 900px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal { transform: translateY(0); }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: var(--sand-light);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      z-index: 10;
+    }
+
+    .modal-close:hover { background: var(--sunset-pink); }
+
+    .modal-header {
+      padding: 2rem;
+      background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-mid));
+      color: var(--white);
+    }
+
+    .modal-candidate-info { display: flex; gap: 1.5rem; align-items: center; }
+
+    .modal-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      border: 3px solid rgba(255,255,255,0.3);
+    }
+
+    .modal-name { font-family: 'Zen Maru Gothic', sans-serif; font-size: 1.75rem; margin-bottom: 0.5rem; }
+    .modal-party { display: inline-block; padding: 0.35rem 1rem; background: rgba(255,255,255,0.2); border-radius: 50px; font-size: 0.85rem; }
+
+    .modal-body { padding: 2rem; }
+    .modal-section { margin-bottom: 2rem; }
+    .modal-section:last-child { margin-bottom: 0; }
+    .modal-section-title { font-family: 'Zen Maru Gothic', sans-serif; font-size: 1.1rem; color: var(--ocean-deep); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--ocean-light); }
+    .modal-stance-grid { display: grid; gap: 1.5rem; }
+    .modal-stance-item { background: var(--sand-light); padding: 1rem; border-radius: var(--radius-md); }
+    .modal-stance-question { font-size: 0.85rem; color: var(--text-mid); margin-bottom: 0.75rem; }
+    .modal-text { color: var(--text-dark); white-space: pre-line; line-height: 1.8; }
+
+    .compare-modal { max-width: 1100px; }
+    .compare-modal .modal-header { padding: 1.5rem 2rem; }
+    .compare-modal .modal-body { padding: 0; }
+    .compare-grid { display: grid; grid-template-columns: repeat(var(--compare-count, 2), 1fr); }
+    .compare-column { border-right: 1px solid var(--sand-warm); }
+    .compare-column:last-child { border-right: none; }
+    .compare-column-header { padding: 1.5rem; text-align: center; background: var(--sand-light); border-bottom: 1px solid var(--sand-warm); }
+    .compare-column-photo { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--ocean-light), var(--forest-light)); margin: 0 auto 0.75rem; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 700; color: var(--ocean-deep); }
+    .compare-column-name { font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem; }
+    .compare-column-party { font-size: 0.8rem; color: var(--text-mid); }
+    .compare-cell { padding: 1rem 1.25rem; border-bottom: 1px solid var(--sand-warm); font-size: 0.9rem; }
+    .compare-cell-label { font-size: 0.75rem; color: var(--text-light); margin-bottom: 0.35rem; }
+    .compare-cell-value { color: var(--text-dark); white-space: pre-line; }
+    .compare-stance-visual { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; }
+    .compare-stance-bar { flex: 1; height: 6px; background: linear-gradient(90deg, var(--ocean-light), var(--forest-light)); border-radius: 3px; position: relative; }
+    .compare-stance-marker { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 14px; height: 14px; background: var(--white); border: 2px solid var(--ocean-deep); border-radius: 50%; }
+
+    @media (max-width: 768px) {
+      .hero { padding: 2rem 1rem 3rem; }
+      .main-content { padding: 1.5rem 1rem 3rem; }
+      .candidates-grid { grid-template-columns: 1fr; }
+      .compare-slots { justify-content: center; }
+      .compare-slot { max-width: none; }
+      .modal-candidate-info { flex-direction: column; text-align: center; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .compare-column { border-right: none; border-bottom: 2px solid var(--ocean-light); }
+      .compare-column:last-child { border-bottom: none; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .candidate-card { animation: fadeInUp 0.4s ease forwards; }
+    .candidate-card:nth-child(1) { animation-delay: 0.05s; }
+    .candidate-card:nth-child(2) { animation-delay: 0.1s; }
+    .candidate-card:nth-child(3) { animation-delay: 0.15s; }
+    .candidate-card:nth-child(4) { animation-delay: 0.2s; }
+    .candidate-card:nth-child(5) { animation-delay: 0.25s; }
+    .candidate-card:nth-child(6) { animation-delay: 0.3s; }
+
+    .site-footer {
+      background: var(--ocean-deep);
+      color: rgba(255,255,255,0.8);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .footer-note { font-size: 0.85rem; max-width: 600px; margin: 0 auto; line-height: 1.8; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <span class="hero-badge">2026年2月 投開票</span>
+      <h1>糸島市議会議員選挙<br>立候補予定者アンケート</h1>
+      <p class="hero-subtitle">候補者の政策スタンスや想いを比較して、あなたの一票の参考に</p>
+    </div>
+  </header>
+
+  <div class="wave-divider">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path d="M0,60 C300,0 900,0 1200,60 L1200,0 L0,0 Z" fill="#5a8a6a"/>
+    </svg>
+  </div>
+
+  <main class="main-content">
+    <section class="filter-section">
+      <div class="filter-title">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/></svg>
+        政党で絞り込む
+      </div>
+      <div class="filter-chips" id="filterChips">
+        <button class="filter-chip active" data-party="all">すべて</button>
+        <button class="filter-chip" data-party="無所属">無所属</button>
+        <button class="filter-chip" data-party="公明党">公明党</button>
+        <button class="filter-chip" data-party="立憲民主党">立憲民主党</button>
+        <button class="filter-chip" data-party="参政党">参政党</button>
+      </div>
+    </section>
+
+    <section class="compare-section">
+      <div class="compare-header">
+        <div class="compare-title">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          候補者を比較する
+        </div>
+        <div class="compare-actions">
+          <button class="btn btn-secondary" id="clearCompare">クリア</button>
+          <button class="btn btn-primary" id="openCompare" disabled>比較する</button>
+        </div>
+      </div>
+      <div class="compare-slots" id="compareSlots">
+        <div class="compare-slot" data-slot="0">候補者を選択</div>
+        <div class="compare-slot" data-slot="1">候補者を選択</div>
+        <div class="compare-slot" data-slot="2">候補者を選択（任意）</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">立候補予定者一覧</h2>
+        <span class="candidates-count" id="candidatesCount">11名</span>
+      </div>
+      <div class="candidates-grid" id="candidatesGrid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-note">
+      このサイトは糸島市の有志が作成した非公式の選挙情報サイトです。<br>
+      掲載内容は各候補者からのアンケート回答に基づいています。
+    </p>
+  </footer>
+
+  <div class="modal-overlay" id="detailModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeDetailModal()">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="modal-header">
+        <div class="modal-candidate-info">
+          <div class="modal-photo" id="modalPhoto"></div>
+          <div>
+            <h2 class="modal-name" id="modalName"></h2>
+            <span class="modal-party" id="modalParty"></span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="compareModal">
+    <div class="modal compare-modal">
+      <button class="modal-close" onclick="closeCompareModal()">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="modal-header">
+        <h2 style="font-family: 'Zen Maru Gothic', sans-serif;">候補者比較</h2>
+      </div>
+      <div class="modal-body" id="compareBody"></div>
+    </div>
+  </div>
+
+  <script>
+    const candidates = [
+      {
+        id: 1,
+        name: "松﨑 由美子",
+        party: "公明党",
+        hashtags: "＃元保育士　＃明るい　＃有言実行",
+        spot: "可也山の桜",
+        tenBillion: "福祉・教育・地域",
+        stances: { tourism: 1, development: 1, generation: 3, leadership: 4 },
+        nuclear: "放射性廃棄物の扱い・処理方法の議論",
+        issue: "バスなどの交通利便性向上",
+        vision: "\"安心をカタチに\"\n安心して暮らせる街づくり・子育てしやすい環境を目指して頑張ります！",
+        message: "今日まで38年間休まず地域の役員として、また保育士や民生・児童委員として子どもに関わってきました。\nその経験を生かし、地域の問題点の改善に取り組みながら、糸島の皆さんが、明るい未来に希望を抱き、安心して暮らしていけるよう、全力を尽くしてまいります。"
+      },
+      {
+        id: 2,
+        name: "長田秀樹",
+        party: "無所属",
+        hashtags: "#下駄屋#靴屋#履物屋",
+        spot: "長田靴店",
+        tenBillion: "商店街に生鮮スーパーを作る",
+        stances: { tourism: 1, development: 2, generation: 3, leadership: 2 },
+        nuclear: "避難計画や訓練の充実",
+        issue: "朝昼晩3食、安心して食べていける\n子や孫にお小遣いをあげられる\n普通の暮らしができること",
+        vision: "上記に同じ",
+        message: "お困りごとがあれば、小さなことでも相談してください。一緒に悩みます"
+      },
+      {
+        id: 3,
+        name: "三苫幹治",
+        party: "無所属",
+        hashtags: "怒らない。よく食べる。全ての責任は自分にある。",
+        spot: "ラーメン屋さん",
+        tenBillion: "物価高騰対策。",
+        stances: { tourism: 1, development: 4, generation: 1, leadership: 1 },
+        nuclear: "避難計画や訓練の充実",
+        issue: "人口減少地域への対応",
+        vision: "安心して暮らせる街",
+        message: "皆様のお役に立てるようがんばります。"
+      },
+      {
+        id: 4,
+        name: "徳安 達成",
+        party: "立憲民主党",
+        hashtags: "#サッカー好き#行政書士#子育て中",
+        spot: "白糸の滝",
+        tenBillion: "駅のバリアフリー",
+        stances: { tourism: 2, development: 4, generation: 3, leadership: 2 },
+        nuclear: "避難計画や訓練の充実",
+        issue: "生活の負担の増加",
+        vision: "自然を残しながらも各地に賑わいがあり、人と人のつながりで地域の支え合いがあり、子どもも高齢者も働く世代も笑顔で暮らせる元気なまちにしたい",
+        message: "これからの糸島市は市民の力で創り上げていくまちにしていく必要があります。\n行政だけではできないことがたくさんあり、「糸島市だから」という良いところを伸ばして、市民が満足し、他市から見て羨ましく思われるような糸島市を市民の皆さんと創り上げていきましょう。"
+      },
+      {
+        id: 5,
+        name: "川上 伸悟",
+        party: "無所属",
+        hashtags: "#一生懸命　#誠実　#ときどき面白いことを言う",
+        spot: "伊都安蔵里さんの絶品ランチ🍽️",
+        tenBillion: "小さい子からお年寄りまで何度も行きたくなる大きな公園",
+        stances: { tourism: 1, development: 2, generation: 3, leadership: 2 },
+        nuclear: "避難計画や訓練の充実",
+        issue: "少子高齢化・人口減少社会",
+        vision: "市民の皆さん全員が自分らしくいられる、ここに生まれてきてよかった・住んで良かったと思ってもらえる街",
+        message: "市民の皆さまの声で、市政は動きます。自分事のようにこの街のことを考えていただき、そしてこの街の未来を一緒に描いていきましょう！"
+      },
+      {
+        id: 6,
+        name: "川俣勇介",
+        party: "参政党",
+        hashtags: "#生真面目 #ITと法律のハイブリッド #子煩悩",
+        spot: "またいちのしお",
+        tenBillion: "産婦人科の誘致、病児保育施設の設置",
+        stances: { tourism: 3, development: 3, generation: 3, leadership: 2 },
+        nuclear: "原発リスクや海域調査の情報公開",
+        issue: "市内における消費と雇用を増やして域内経済を回しつつ、移住者に頼らずして生産年齢人口の割合を増やす",
+        vision: "子どもたちが残りたい、戻ってきたい、子育てしたいと思える糸島",
+        message: "私は移住者ですが、糸島を選んだ親として、子どもたちに豊かな糸島を渡す責任があると思っています。\n子どもたちが希望を持てる糸島を、一緒に作っていきましょう！"
+      },
+      {
+        id: 7,
+        name: "さとうみちこ",
+        party: "無所属",
+        hashtags: "#みちこは女性とこどもの味方です　#声を聴きます　#やっているフリはしません",
+        spot: "二丈岳　二丈を中心として糸島が見渡せます。季節ごとに水を張った田んぼ、青々とした田んぼ、金の麦が実っている様子が美しいです。",
+        tenBillion: "質問の意図が分からないので、回答ができません。すみません。",
+        stances: { tourism: 3, development: 3, generation: 3, leadership: 2 },
+        nuclear: "避難計画や訓練の充実",
+        issue: "まず、先に、\n【第2部】の設問のつくりについての率直な感想です。\n\n「高齢者／子ども」「にぎわい／静か」など、\nまちづくりは単純な二択で語れるものではないと感じました。\n糸島にはさまざまな人が暮らしており、地域の特性や一人ひとりの暮らしによって、必要なことは異なります。\nまた、「調整重視かスピード重視か」も、案件によって判断が変わるため、点数化するのは難しいと思いました。\n\n以下は、糸島市の最重要課題についてお答えします。\n\n1．前提として大切にしたいこと\n① 可能性が発揮できる支援へ\n\n日本はすでに人口減少社会に入っています。\n糸島でも、山林の荒廃、空き家の増加、公共交通の縮小、公共施設の維持困難、地域の担い手不足など、\nこれまでの「人口増加を前提とした仕組み」が合わなくなってきています。\n量的な支援の在り方を根本的に考え直す必要があります。\n単に不足を補う施策だけではなく、\n今後、人口が減っても、\n地域に住む人々の生活、活動、人間関係がより充実していくような施策が必要であると考えています。\n糸島の自然や人の魅力を生かし、市民一人ひとりが「このまちの主人公」として、\n自分の力や想いを発揮できるような支援が大切だと思います。\n\n② 人権を土台に\n\n女性、高齢者、障がいのある方、こどもなど、\n声が届きにくい立場の方がいる現状を、日々の相談の中で感じています。\n「困りごとの連鎖」を防ぎたい。\n困りごとが重なって深刻化する前に、早く気づき、支える仕組みが必要です。\n\n2．私が特に取り組みたいこと（一部）\n\n※市民の皆さんとの対話によって、政策は変わり、深まっていくものだと考えています。ここでは一部をご紹介します。\n\n① こどもまんなかのまちづくり\nこどもが自分らしく育ち、自分で考え、選び、決めていけること。\nそのために、家庭・学校・地域・行政など、周りの大人の関わり方や、\nこどもの声が届く仕組み、安心して過ごせる居場所を大切にしたいです。\n\n② 交通×福祉×地域づくり\n公共交通の不便さは、高齢者をはじめ多くの方の不安につながっています。国も「多様な担い手」の推進をしており\n交通・福祉・まちづくりを分野ごとに考えるのではなく、\n行政、民間、地域、団体が連携し、地域の実情に合った取り組みを進めたいです。\n\n③ 女性が自分らしく生きられる環境づくり\n糸島市の各種審議会の審議委員の女性の割合は３２％（R6年度）。\nまた日本では、平均所得も女性の方が低いという現状があります。\n・女性が意思表明できるための支援や環境設定、意思決定の場に女性の参画を進める。\n・女性の経済的自立のための支援\n・性別による暴力の防止（DVなど）\n\n④ 自然とともに、森に親しむまちへ\nまず身近な公園や緑地・小さな森を整え、\n「自然の中で過ごすこと」が日常になる糸島にしたいです。\n\n⑤人材の価値を最大限に引き出す（人的資本経営）\n・住民の暮らしを支えているのは行政職員です。\n人を資源としてとらえ、会計年度任用職員さんも含め、\nキャリア形成や成長を支えながら\n組織が発展していけるようにしたいと考えています。\nひいては、行政サービスの充実にも繋がります。\n・介護職、保育士などケアの領域で働く方々の安定。\n・地域には、年齢、性別、国籍に関わらず、\n素晴らしい方がたくさんいます。\nそういった方々がまちに関わり、つくっていく機会を創出します。\n（市民参画）",
+        vision: "とにかく、みんなが安心して暮らせることです。",
+        message: "一緒に考え、一緒に動いて、素敵なまちをつくっていきましょう。"
+      },
+      {
+        id: 8,
+        name: "やすまる仁史",
+        party: "無所属",
+        hashtags: "元自衛官、直球勝負、熱意",
+        spot: "火山山頂",
+        tenBillion: "市民参加型予算を創設し、使い道の決定権を市民に直接解放する",
+        stances: { tourism: 3, development: 3, generation: 3, leadership: 3 },
+        nuclear: "原発リスクや海域調査の情報公開",
+        issue: "議会と市民の心理的・物理的な距離の乖離",
+        vision: "子どもたちが未来に希望を持ち、大人になっても住みたいまたは帰ってきたいと思う街",
+        message: "私は16歳のとき自衛隊への入隊を決意しました。「日本や社会を良くしたい」という思いが私の原点です。その後、自衛官として県外に勤務しておりましたが、糸島にUターンし、現在はその熱量で糸島に向き合っています。これまでの命がけで持ってきた「貢献への情熱」を、次は糸島の未来のために使わせてください。次世代が誇れる、希望ある街を作りたいです。"
+      },
+      {
+        id: 9,
+        name: "岩永尚樹",
+        party: "立憲民主党",
+        hashtags: "#27歳#最年少#糸島をよくしたい",
+        spot: "火山展望台 / 牧のうどん本店 / 塚本鮮魚店",
+        tenBillion: "公園整備、物価高対策、バスや交通",
+        stances: { tourism: 2, development: 4, generation: 3, leadership: 3 },
+        nuclear: "避難計画や訓練の充実",
+        issue: "糸島内での地域格差、福岡市と糸島の格差",
+        vision: "単なるベットタウンではなく、この街で働き、遊び、人生を謳歌できる『自立した糸島』へとアップデートしたい。",
+        message: "私には、古い政治のルールやしがらみはありません。それはつまり、特定の誰かのためではなく、市民一人ひとりのために働けるということです。\n27歳。経験が足りないと言われるかもしれません。しかし、だからこそ先入観なく皆さんの声に耳を傾け、それを透明性を持って議会へ反映させることができます。あなたの声を、そのまま市政のど真ん中へ。私にその橋渡しをさせてください。"
+      },
+      {
+        id: 10,
+        name: "松本たかと",
+        party: "無所属",
+        hashtags: "#思い立ったらすぐ行動 #わかもの・ばかものよそもの #サッカー部",
+        spot: "火山",
+        tenBillion: "公設民営のプレイパーク(こどもたちが自由に無料で遊べる場所)作り",
+        stances: { tourism: 3, development: 3, generation: 4, leadership: 3 },
+        nuclear: "原発リスクや海域調査の情報公開",
+        issue: "「子育てに優しくないまち」から「ここで子育てをしたいまち」へ。\n\nまちの前提として、こどもが健やかに育つ場所であること。\n若者世代/子育て世代がこのまちを選べる前提を作ることが最優先。\n「引っ越してきたけど、隣の福岡市のほうがいいよね」と、いわれないまちづくり。\n\n重要課題と言えるのは、「こどもを安心して育てられるまち」であることが基礎になって、\n◯自然や人のつながりを大切にしてくれる企業の支社・本社の誘致\n◯地域の担い手が増えること\n◯税収による社会福祉の拡充\nなどが進んでいくため。\n\n子育てに優しいまちを実現するために\n例えば、\n・幼稚園/保育園を生活の実情に合わせてちゃんと選べること\n・こどもが病気になった時に、安心して預けられる病児保育の拡充\n・雨の日でも、誰でも楽しめるプレイパーク等の施設設置/誘致\n・市民が参加して進める「糸島のこどもの教育会」などの外部組織結成\n・冬の夕方でも通学路をしっかり明るくする街灯の設置\nなどを提案していく。",
+        vision: "「すみ良い田舎」が達成され、それを継続できるまち\nそれを、市・市民・企業・大学がみんなで目指している糸島。\n\n①自然が守られていること。\n糸島の良さの源である「自然」が大切に守られ、これからも保全できる仕組みが整っていること。野山や田畑を守ることが、一部の人の善意・負担で回っているのではなく、産学官民が連携して、守っている状態。\n福岡市のように都市化していく未来ではなく、都市に近い田舎として、糸島の良さを残していける、条例や仕組みや組織、基盤が整っている状態。\n\n②まちをみんなで守れていること。\n地域を守る住民の自治活動と市政・企業・大学が協力しあって、まちを守っていけること。全てを市民に投げやる形でも、逆に、全てを市役所に投げやる形でもなく協力しあう状態。\n日本で「前例がない」ことでも、話し合い、協力しあい、成し遂げられるまちづくり。\nここに引っ越してきた人も、元々住んでいる人も、一緒に手を取り合って、進められるまちづくり。\n\n③こどもたちが「ここが地元でよかった」と思うまち。\nこのまちで育ったこどもたちが、「このまちで暮らし続けたい/戻ってきたい」と思ってくれるようなまち。投票ができないこどもたちの自由も権利もしっかりと保証され、「このまちが好きだ」と思ってもらえるまちづくり。\n\n④「こうだったらいいのに」を叶える知恵をみんなが出すまちづくり\n「駅にエレベーターがなくて困る」「ここに街灯があればいいのに」\n限られた予算で解決できないのであれば、それを解決する方法を、市民、市役所、大学、民間が知恵を出し合って、解決できるまちづくり。\n例)駅にエレベーターを→クラウドファンディングしよう！/企業の協賛をお願いしよう！/エレベーターがなくてもホームに行けるバリアフリー化はできないかな…？\n\n⑤伝統や文化、建物がちゃんと残っているまちづくり\n各地域に伝わる伝統やお祭り、地域の文化、郷土料理。そういった「失ったら取り戻せない魅力」がちゃんと残り、糸島の魅力の1つとして認められている状態。\n地域の長老的おじいちゃんの話が、ちゃんと語り継がれ(デジタルアーカイブ化など)残っているまちづくり。\n歴史のある建物や場所が大切にされ、「更地にして新しい建物を建てる」ばかりの都市化が進まないこと。",
+        message: "今が転換期です。\n\n糸島市は、「福岡市に近いから」という理由で移住先として選ばれた話をよく聞きます。\n福岡が注目されるにつれて、糸島の魅力が発見され、人口が増加し、多様な魅力をもつ人々も移住し、地元をずっと守ってきた人の力も発揮され…\n良い流れが続いて、「魅力のあるまち」として認知されるようになってきました。\n\nでも実際は、課題も山積しています。\n・糸島の田園風景を守る皆様の高齢化は進み、荒れた土地が少しずつ増えてきました。\n・挑戦する人が市に応援を頼んでも、「前例がない」と断られたと聞きました。(私も何度か断られました。)\n・なんとなく移住してきた人と地元民の間に壁があって、お互いにやきもきしているのを見ました。\n・何十年も変わっていない慣習で、自治会運営に苦労するまちの人を見てきました。\n・子育てのために移住したのに、結局福岡市にまた移り住んだ人も見てきました。\n・よくわからないルールや、少しずつ進む分断が、糸島の魅力を少しずつ削いでいます。\n\n糸島の魅力はこんなものじゃないはずです。\n\n糸島の良いところを守り、伸ばし、暮らしやすさを実現するには、変えるところは変えて、\n守るべきもの(伝統や文化)をちゃんと残していく必要があります。\n\nこれまで、私は、前原西町の住人として、農業に関わるものとして、移住者として、元九大生として、たくさんの現場を見てきました。そして、人としてたくさん育てられて、糸島とここにいる人たちのことが大好きになりました。\n\nここで糸島を変えられないと、二度と戻れなくなる瀬戸際です。\nだから私は、人生を賭けてこの挑戦をすることにしました。\n\nもう、「前例踏襲」の時代は終わりです。\n\nぜひみなさんの思いをぶつけて、応援したい人を選んでいただけると嬉しいです。"
+      },
+      {
+        id: 11,
+        name: "中尾正俊",
+        party: "公明党",
+        hashtags: "#真面目 #ストイック #倹約家",
+        spot: "二見ヶ浦エリア",
+        tenBillion: "各校区に分配し、子ども～お年寄りまで皆さんで考えていただく。",
+        stances: { tourism: 2, development: 2, generation: 2, leadership: 3 },
+        nuclear: "避難計画や訓練の充実",
+        issue: "色々ありますが、突き詰めると自主財源(特に法人税収入）が少ないことです。簡単に言うと、市民の皆さんの要望に応える「お金がない」ことです。福岡都市圏の中で一人当たりの法人市民税は常に下から1か2番目です。",
+        vision: "若い方が目標を持ち、挑戦し、それを応援できる街にしたいです。",
+        message: "議員には、地域の代表としての視点と、糸島市全体の発展のための視点が求められます。昨今、全市町村が人口減少対策を行っている中で95％の自治体は人口が減少していますが、幸いなことに糸島市は福岡市からの流入もあり、人口が増加しています。この機をとらえ、成長に転換できるか、または、場当たり的な対応となるかで、10年後、20年後の糸島は大きく変わります。私は「攻め」の自治体運営を提案して参ります。"
+      }
+    ];
+
+    let selectedParty = 'all';
+    let compareList = [];
+
+    const candidatesGrid = document.getElementById('candidatesGrid');
+    const filterChips = document.getElementById('filterChips');
+    const compareSlots = document.getElementById('compareSlots');
+    const openCompareBtn = document.getElementById('openCompare');
+    const clearCompareBtn = document.getElementById('clearCompare');
+    const candidatesCount = document.getElementById('candidatesCount');
+
+    const partyClass = {
+      '公明党': 'party-komei',
+      '無所属': 'party-musho',
+      '立憲民主党': 'party-rikken',
+      '参政党': 'party-sansei'
+    };
+
+    const stanceLabels = {
+      tourism: { left: '観光・賑わい', right: '静かな住環境', question: 'これからの糸島はどちらを重視すべき？' },
+      development: { left: '開発推進', right: '自然を死守', question: '海岸線や山林の開発について' },
+      generation: { left: '高齢者優先', right: '若者投資優先', question: '予算配分を大きく変えるなら？' },
+      leadership: { left: '調整型', right: '突破型', question: '議会や行政運営のスタイルは？' }
+    };
+
+    function init() {
+      renderCandidates();
+      setupFilterListeners();
+      setupCompareListeners();
+    }
+
+    function renderCandidates() {
+      const filtered = selectedParty === 'all' ? candidates : candidates.filter(c => c.party === selectedParty);
+      candidatesCount.textContent = `${filtered.length}名`;
+
+      candidatesGrid.innerHTML = filtered.map(candidate => `
+        <article class="candidate-card ${compareList.includes(candidate.id) ? 'selected' : ''}" data-id="${candidate.id}">
+          <button class="card-compare-btn ${compareList.includes(candidate.id) ? 'selected' : ''}" onclick="toggleCompare(${candidate.id}, event)">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              ${compareList.includes(candidate.id)
+                ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>'
+                : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>'}
+            </svg>
+          </button>
+          <div class="card-header">
+            <div class="candidate-photo">${candidate.name.charAt(0)}</div>
+            <div class="candidate-info">
+              <h3 class="candidate-name">${candidate.name}</h3>
+              <span class="candidate-party ${partyClass[candidate.party] || 'party-musho'}">${candidate.party}</span>
+              <p class="candidate-hashtags">${candidate.hashtags}</p>
+            </div>
+          </div>
+          <div class="card-stances">
+            ${renderStanceBar('tourism', candidate.stances.tourism)}
+            ${renderStanceBar('generation', candidate.stances.generation)}
+          </div>
+          <div class="card-content">
+            <div class="content-section">
+              <div class="content-label">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                推しスポット
+              </div>
+              <p class="content-text">${truncate(candidate.spot, 40)}</p>
+            </div>
+            <div class="content-section">
+              <div class="content-label">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                最重要課題
+              </div>
+              <p class="content-text">${truncate(candidate.issue, 50)}</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="view-detail-btn" onclick="openDetailModal(${candidate.id})">詳細を見る</button>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function renderStanceBar(key, value) {
+      const labels = stanceLabels[key];
+      const position = ((value - 1) / 3) * 100;
+      return `
+        <div class="stance-item">
+          <div class="stance-label">
+            <span class="stance-label-left">${labels.left}</span>
+            <span class="stance-label-right">${labels.right}</span>
+          </div>
+          <div class="stance-bar">
+            <div class="stance-marker" style="left: ${position}%"></div>
+          </div>
+        </div>
+      `;
+    }
+
+    function truncate(text, maxLength) {
+      if (!text) return '';
+      const firstLine = text.split('\n')[0];
+      return firstLine.length > maxLength ? firstLine.slice(0, maxLength) + '...' : firstLine;
+    }
+
+    function renderExpandableText(text, maxLength = 200) {
+      if (!text || text.length <= maxLength) {
+        return `<div class="modal-text">${text || ''}</div>`;
+      }
+      const id = 'exp-' + Math.random().toString(36).substr(2, 9);
+      return `
+        <div class="expandable-text collapsed" id="${id}">
+          <div class="text-content modal-text">${text}</div>
+          <button class="expand-btn" onclick="toggleExpand('${id}')">
+            <span class="expand-label">続きを読む</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+        </div>
+      `;
+    }
+
+    function toggleExpand(id) {
+      const el = document.getElementById(id);
+      const btn = el.querySelector('.expand-btn');
+      const label = btn.querySelector('.expand-label');
+      const svg = btn.querySelector('svg');
+
+      if (el.classList.contains('collapsed')) {
+        el.classList.remove('collapsed');
+        label.textContent = '閉じる';
+        svg.style.transform = 'rotate(180deg)';
+      } else {
+        el.classList.add('collapsed');
+        label.textContent = '続きを読む';
+        svg.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    function setupFilterListeners() {
+      filterChips.addEventListener('click', (e) => {
+        if (e.target.classList.contains('filter-chip')) {
+          document.querySelectorAll('.filter-chip').forEach(chip => chip.classList.remove('active'));
+          e.target.classList.add('active');
+          selectedParty = e.target.dataset.party;
+          renderCandidates();
+        }
+      });
+    }
+
+    function toggleCompare(id, event) {
+      event.stopPropagation();
+      if (compareList.includes(id)) {
+        compareList = compareList.filter(cid => cid !== id);
+      } else if (compareList.length < 3) {
+        compareList.push(id);
+      }
+      updateCompareUI();
+      renderCandidates();
+    }
+
+    function updateCompareUI() {
+      const slots = compareSlots.querySelectorAll('.compare-slot');
+      slots.forEach((slot, index) => {
+        if (compareList[index]) {
+          const candidate = candidates.find(c => c.id === compareList[index]);
+          slot.className = 'compare-slot filled';
+          slot.innerHTML = `
+            <div class="compare-slot-info">
+              <div class="compare-slot-avatar">${candidate.name.charAt(0)}</div>
+              <span class="compare-slot-name">${candidate.name}</span>
+            </div>
+            <button class="compare-slot-remove" onclick="removeFromCompare(${index})">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          `;
+        } else {
+          slot.className = 'compare-slot';
+          slot.innerHTML = index === 2 ? '候補者を選択（任意）' : '候補者を選択';
+        }
+      });
+      openCompareBtn.disabled = compareList.length < 2;
+    }
+
+    function removeFromCompare(index) {
+      compareList.splice(index, 1);
+      updateCompareUI();
+      renderCandidates();
+    }
+
+    function setupCompareListeners() {
+      clearCompareBtn.addEventListener('click', () => {
+        compareList = [];
+        updateCompareUI();
+        renderCandidates();
+      });
+      openCompareBtn.addEventListener('click', openCompareModal);
+    }
+
+    function openDetailModal(id) {
+      const candidate = candidates.find(c => c.id === id);
+      const modal = document.getElementById('detailModal');
+
+      document.getElementById('modalPhoto').textContent = candidate.name.charAt(0);
+      document.getElementById('modalName').textContent = candidate.name;
+      document.getElementById('modalParty').textContent = candidate.party;
+
+      document.getElementById('modalBody').innerHTML = `
+        <div class="modal-section">
+          <h3 class="modal-section-title">自己紹介</h3>
+          <p class="modal-text">${candidate.hashtags}</p>
+        </div>
+        <div class="modal-section">
+          <h3 class="modal-section-title">政策スタンス</h3>
+          <div class="modal-stance-grid">
+            ${Object.keys(stanceLabels).map(key => `
+              <div class="modal-stance-item">
+                <div class="modal-stance-question">${stanceLabels[key].question}</div>
+                ${renderStanceBar(key, candidate.stances[key])}
+              </div>
+            `).join('')}
+          </div>
+        </div>
+        <div class="modal-section">
+          <h3 class="modal-section-title">原発への対応</h3>
+          <p class="modal-text">${candidate.nuclear}</p>
+        </div>
+        <div class="modal-section">
+          <h3 class="modal-section-title">糸島の推しスポット</h3>
+          ${renderExpandableText(candidate.spot)}
+        </div>
+        <div class="modal-section">
+          <h3 class="modal-section-title">10億円を糸島のために使うなら</h3>
+          ${renderExpandableText(candidate.tenBillion)}
+        </div>
+        <div class="modal-section">
+          <h3 class="modal-section-title">糸島の最重要課題</h3>
+          ${renderExpandableText(candidate.issue)}
+        </div>
+        <div class="modal-section">
+          <h3 class="modal-section-title">10〜20年後のビジョン</h3>
+          ${renderExpandableText(candidate.vision)}
+        </div>
+        <div class="modal-section">
+          <h3 class="modal-section-title">市民へのメッセージ</h3>
+          ${renderExpandableText(candidate.message)}
+        </div>
+      `;
+
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDetailModal() {
+      document.getElementById('detailModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function openCompareModal() {
+      const modal = document.getElementById('compareModal');
+      const compareData = compareList.map(id => candidates.find(c => c.id === id));
+
+      document.getElementById('compareBody').innerHTML = `
+        <div class="compare-grid" style="--compare-count: ${compareData.length}">
+          ${compareData.map(c => `
+            <div class="compare-column">
+              <div class="compare-column-header">
+                <div class="compare-column-photo">${c.name.charAt(0)}</div>
+                <div class="compare-column-name">${c.name}</div>
+                <div class="compare-column-party">${c.party}</div>
+              </div>
+              <div class="compare-cell">
+                <div class="compare-cell-label">自己紹介</div>
+                <div class="compare-cell-value">${c.hashtags}</div>
+              </div>
+              ${Object.keys(stanceLabels).map(key => `
+                <div class="compare-cell">
+                  <div class="compare-cell-label">${stanceLabels[key].question}</div>
+                  <div class="compare-stance-visual">
+                    <span style="font-size: 0.7rem; color: var(--text-light);">${stanceLabels[key].left}</span>
+                    <div class="compare-stance-bar">
+                      <div class="compare-stance-marker" style="left: ${((c.stances[key] - 1) / 3) * 100}%"></div>
+                    </div>
+                    <span style="font-size: 0.7rem; color: var(--text-light);">${stanceLabels[key].right}</span>
+                  </div>
+                </div>
+              `).join('')}
+              <div class="compare-cell">
+                <div class="compare-cell-label">原発への対応</div>
+                <div class="compare-cell-value">${c.nuclear}</div>
+              </div>
+              <div class="compare-cell">
+                <div class="compare-cell-label">推しスポット</div>
+                <div class="compare-cell-value">${truncate(c.spot, 60)}</div>
+              </div>
+              <div class="compare-cell">
+                <div class="compare-cell-label">10億円の使い道</div>
+                <div class="compare-cell-value">${truncate(c.tenBillion, 60)}</div>
+              </div>
+              <div class="compare-cell">
+                <div class="compare-cell-label">最重要課題</div>
+                <div class="compare-cell-value">${truncate(c.issue, 100)}</div>
+              </div>
+              <div class="compare-cell">
+                <div class="compare-cell-label">ビジョン</div>
+                <div class="compare-cell-value">${truncate(c.vision, 100)}</div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCompareModal() {
+      document.getElementById('compareModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          overlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+          modal.classList.remove('active');
+        });
+        document.body.style.overflow = '';
+      }
+    });
+
+    init();
+  </script>
+</body>
+</html>
