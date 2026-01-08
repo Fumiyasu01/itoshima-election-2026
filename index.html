@@ -640,6 +640,62 @@
       padding: 0 0 2rem;
     }
 
+    .about-policies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .policy-block {
+      background: var(--white);
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .policy-title {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 1rem;
+      color: var(--ocean-deep);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--ocean-light);
+    }
+
+    .policy-text {
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      line-height: 1.8;
+    }
+
+    .policy-list {
+      list-style: none;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      line-height: 1.8;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .policy-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--ocean-mid);
+      font-weight: bold;
+    }
+
+    .about-divider {
+      border: none;
+      border-top: 1px solid var(--ocean-light);
+      margin: 2rem 0;
+    }
+
     .about-headline {
       font-family: 'Zen Maru Gothic', sans-serif;
       font-size: 1.25rem;
@@ -757,6 +813,31 @@
       </button>
       <div class="about-content" id="aboutContent">
         <div class="about-inner">
+          <div class="about-policies">
+            <div class="policy-block">
+              <h4 class="policy-title">サイトの目的</h4>
+              <p class="policy-text">本サイトは糸島市議会議員選挙における候補者情報を中立的に提供する情報サイトです。特定の候補者を応援・推薦するものではありません。</p>
+            </div>
+            <div class="policy-block">
+              <h4 class="policy-title">掲載方針</h4>
+              <ul class="policy-list">
+                <li>立候補者全員に平等にアンケートを配布</li>
+                <li>回答いただいた候補者のみを掲載</li>
+                <li>掲載順は回答受付順</li>
+                <li>原文を尊重し、編集は行いません</li>
+                <li>表現・構成・ボリュームを統一します</li>
+              </ul>
+            </div>
+            <div class="policy-block">
+              <h4 class="policy-title">運営方針</h4>
+              <ul class="policy-list">
+                <li>中立・非営利・非党派の立場</li>
+                <li>有料広告は使用しません</li>
+                <li>選挙運動ではなく、情報提供活動です</li>
+              </ul>
+            </div>
+          </div>
+          <hr class="about-divider">
           <h3 class="about-headline">私が糸島で「政治を身近にしたい」本当の理由</h3>
           <div class="about-text">
             <p>私が糸島で政治に関わろうとしているのは、大人のためだけではなく、子どもたちの未来のためでもあります。</p>
