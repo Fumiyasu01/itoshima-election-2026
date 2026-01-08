@@ -527,6 +527,25 @@
     .modal-stance-question { font-size: 0.85rem; color: var(--text-mid); margin-bottom: 0.75rem; }
     .modal-text { color: var(--text-dark); white-space: pre-line; line-height: 1.8; }
 
+    .stance-note {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: linear-gradient(135deg, var(--ocean-light) 0%, var(--forest-light) 100%);
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--ocean-deep);
+    }
+    .stance-note-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--ocean-deep);
+      margin-bottom: 0.5rem;
+    }
+    .stance-note-text {
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      line-height: 1.8;
+    }
+
     .compare-modal { max-width: 1100px; }
     .compare-modal .modal-header { padding: 1.5rem 2rem; }
     .compare-modal .modal-body { padding: 0; }
@@ -961,6 +980,7 @@
         spot: "海岸 朝日や夕日の時刻に、海辺を散歩すると景色がとてもきれい 海を眺めていると古代の人々がどのように生活していたか想像できる",
         tenBillion: "物価が高騰し、生活が苦しい低所得者への支援を行う 子どもや高齢者、障がい者など、教育・福祉の充実",
         stances: { tourism: 4, development: 2, generation: 2, leadership: 1 },
+        stanceNote: "どちらか一方では選べない。高齢者も子どもも両方大事。無駄な補助金・ムダな事業を見直すことが最優先。子どもの予算を削って高齢者に使う／その逆ではなく、全体の最適化が必要。家庭でも子どももおじいちゃんおばあちゃんも大切にするのと同じ。",
         nuclear: "避難計画や訓練の充実",
         issue: "法令が遵守されず、公平・公正であるべき市のサービスや事業が不公平・不平等になっている\n議会がチェック機能を果たしていない\n市の運営が私物化している状態を最も問題視",
         vision: "今すでに大規模マンションの予定があり、不動産業者や大建設者が喜ぶ街になっている\n利権に食い物にされない街\nほどほどににぎわった、住みやすい街を望んでいる",
@@ -1189,6 +1209,12 @@
               </div>
             `).join('')}
           </div>
+          ${candidate.stanceNote ? `
+            <div class="stance-note">
+              <div class="stance-note-label">スタンスについての補足</div>
+              <p class="stance-note-text">${candidate.stanceNote}</p>
+            </div>
+          ` : ''}
         </div>
         <div class="modal-section">
           <h3 class="modal-section-title">原発への対応</h3>
