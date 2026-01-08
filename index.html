@@ -336,22 +336,24 @@
       position: absolute;
       top: 1rem;
       right: 1rem;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
+      padding: 0.4rem 0.75rem;
+      border-radius: 50px;
       border: 2px solid var(--ocean-light);
       background: var(--white);
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 0.25rem;
       transition: all 0.2s;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ocean-deep);
     }
 
     .card-compare-btn:hover { border-color: var(--ocean-mid); background: var(--ocean-light); }
-    .card-compare-btn.selected { background: var(--ocean-deep); border-color: var(--ocean-deep); }
-    .card-compare-btn svg { width: 16px; height: 16px; stroke: var(--ocean-deep); }
-    .card-compare-btn.selected svg { stroke: var(--white); }
+    .card-compare-btn.selected { background: var(--ocean-deep); border-color: var(--ocean-deep); color: var(--white); }
+    .card-compare-btn svg { width: 14px; height: 14px; stroke: currentColor; flex-shrink: 0; }
 
     .card-stances { padding: 1.25rem 1.5rem; background: var(--sand-light); }
     .stance-item { margin-bottom: 1rem; }
@@ -1111,6 +1113,7 @@
                 ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>'
                 : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>'}
             </svg>
+            <span>${compareList.includes(candidate.id) ? '比較中' : '比較'}</span>
           </button>
           <div class="card-header">
             <div class="candidate-photo">${candidate.photo ? `<img src="${candidate.photo}" alt="${candidate.name}">` : candidate.name.charAt(0)}</div>
