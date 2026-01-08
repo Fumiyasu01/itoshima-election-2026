@@ -794,7 +794,7 @@
       <div class="compare-slots" id="compareSlots">
         <div class="compare-slot" data-slot="0">候補者を選択</div>
         <div class="compare-slot" data-slot="1">候補者を選択</div>
-        <div class="compare-slot" data-slot="2">候補者を選択（任意）</div>
+        <div class="compare-slot" data-slot="2">候補者を選択</div>
       </div>
     </section>
 
@@ -1244,7 +1244,7 @@
           `;
         } else {
           slot.className = 'compare-slot';
-          slot.innerHTML = index === 2 ? '候補者を選択（任意）' : '候補者を選択';
+          slot.innerHTML = '候補者を選択';
         }
       });
       openCompareBtn.disabled = compareList.length < 2;
