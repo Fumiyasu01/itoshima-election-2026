@@ -1035,6 +1035,60 @@
       </div>
     </section>
 
+    <section class="about-section" style="margin: 2rem 0;">
+      <div class="about-container">
+        <button class="about-toggle" onclick="toggleAbout()">
+          <span class="about-toggle-title">このサイトについて</span>
+          <svg class="about-toggle-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="about-content" id="aboutContent">
+          <div class="about-inner">
+            <div class="about-policies">
+              <div class="policy-block">
+                <h4 class="policy-title">サイトの目的</h4>
+                <p class="policy-text">本サイトは糸島市長選挙・市議会議員選挙における候補者情報を中立的に提供する情報サイトです。特定の候補者を応援・推薦するものではありません。</p>
+              </div>
+              <div class="policy-block">
+                <h4 class="policy-title">掲載方針</h4>
+                <ul class="policy-list">
+                  <li>立候補者全員に平等にアンケートを配布</li>
+                  <li>回答いただいた候補者のみを掲載</li>
+                  <li>掲載順は回答受付順</li>
+                  <li>原文を尊重し、編集は行いません</li>
+                </ul>
+              </div>
+              <div class="policy-block">
+                <h4 class="policy-title">運営方針</h4>
+                <ul class="policy-list">
+                  <li>中立・非営利・非党派の立場</li>
+                  <li>有料広告は使用しません</li>
+                  <li>選挙運動ではなく、情報提供活動です</li>
+                </ul>
+              </div>
+            </div>
+            <hr class="about-divider">
+            <h3 class="about-headline">私が糸島で「政治を身近にしたい」本当の理由</h3>
+            <div class="about-text">
+              <p>私が糸島で政治に関わろうとしているのは、大人のためだけではなく、子どもたちの未来のためでもあります。</p>
+              <p>今の日本では、18歳になれば誰でも、お金を払わなくても、一人一票の選挙権を持つことができます。でもこれは、最初から当たり前にあったものではありません。</p>
+              <p>昔は、選挙に行ける人が限られていた。女性や若い人には投票権がなかった。そんな時代が実際にありました。つまり今の私たちは、「街や国の方向を自分で選べる力」を、無料で与えられている状態です。</p>
+              <p>これは冷静に考えると、かなり特別で、かなり面白いことだと思っています。</p>
+              <p>一票を投じることで、誰が決める側に立つのか、税金がどこに使われるのか、子育てや教育、暮らしがどう変わるのか——そういったことに自分が関われる。街が変わる可能性に、自分の意思が含まれる。これは本来、とてもワクワクすることです。</p>
+              <p>でも今は、「政治は難しい」「どうせ変わらない」「関わらなくても生活できる」そんな空気が先に立ってしまっています。</p>
+              <p>だから私は、お母さんたちが政治を家計の延長として理解できるようにしたいし、同時に、子どもたちにも「選挙って何のためにあるのか」「投票しないという選択も、実は"選んでいる"こと」を、分かりやすく伝えたいと思っています。</p>
+              <p>政治がどうだ、国がどうだと言う前に、今の政治は「行った人」「行かなかった人」その全員の結果でできている。だったら、最初から「自分ごと」として知っていた方がいい。最初から「参加できるもの」として育っていた方がいい。</p>
+              <p>私は、政治を教えたいわけでも、思想を押し付けたいわけでもありません。ただ、「自分で街をつくれる可能性がある」「その入り口が一票なんだ」という感覚を、大人にも、子どもにも、渡したいだけです。</p>
+              <p>その積み重ねの先に、糸島市が「投票率が高いまち」ではなく、「自分たちで考え、選び、動くまち」として育っていくと考えます。</p>
+            </div>
+            <div class="about-signature">
+              <span class="about-org">みんなの選挙糸島</span>
+              <span class="about-name">代表　松田 一葉</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="section-divider">
       <span class="section-divider-text">市議会議員選挙</span>
     </div>
@@ -1079,60 +1133,6 @@
       <div class="candidates-grid" id="candidatesGrid"></div>
     </section>
   </main>
-
-  <section class="about-section">
-    <div class="about-container">
-      <button class="about-toggle" onclick="toggleAbout()">
-        <span class="about-toggle-title">このサイトについて</span>
-        <svg class="about-toggle-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-      </button>
-      <div class="about-content" id="aboutContent">
-        <div class="about-inner">
-          <div class="about-policies">
-            <div class="policy-block">
-              <h4 class="policy-title">サイトの目的</h4>
-              <p class="policy-text">本サイトは糸島市長選挙・市議会議員選挙における候補者情報を中立的に提供する情報サイトです。特定の候補者を応援・推薦するものではありません。</p>
-            </div>
-            <div class="policy-block">
-              <h4 class="policy-title">掲載方針</h4>
-              <ul class="policy-list">
-                <li>立候補者全員に平等にアンケートを配布</li>
-                <li>回答いただいた候補者のみを掲載</li>
-                <li>掲載順は回答受付順</li>
-                <li>原文を尊重し、編集は行いません</li>
-              </ul>
-            </div>
-            <div class="policy-block">
-              <h4 class="policy-title">運営方針</h4>
-              <ul class="policy-list">
-                <li>中立・非営利・非党派の立場</li>
-                <li>有料広告は使用しません</li>
-                <li>選挙運動ではなく、情報提供活動です</li>
-              </ul>
-            </div>
-          </div>
-          <hr class="about-divider">
-          <h3 class="about-headline">私が糸島で「政治を身近にしたい」本当の理由</h3>
-          <div class="about-text">
-            <p>私が糸島で政治に関わろうとしているのは、大人のためだけではなく、子どもたちの未来のためでもあります。</p>
-            <p>今の日本では、18歳になれば誰でも、お金を払わなくても、一人一票の選挙権を持つことができます。でもこれは、最初から当たり前にあったものではありません。</p>
-            <p>昔は、選挙に行ける人が限られていた。女性や若い人には投票権がなかった。そんな時代が実際にありました。つまり今の私たちは、「街や国の方向を自分で選べる力」を、無料で与えられている状態です。</p>
-            <p>これは冷静に考えると、かなり特別で、かなり面白いことだと思っています。</p>
-            <p>一票を投じることで、誰が決める側に立つのか、税金がどこに使われるのか、子育てや教育、暮らしがどう変わるのか——そういったことに自分が関われる。街が変わる可能性に、自分の意思が含まれる。これは本来、とてもワクワクすることです。</p>
-            <p>でも今は、「政治は難しい」「どうせ変わらない」「関わらなくても生活できる」そんな空気が先に立ってしまっています。</p>
-            <p>だから私は、お母さんたちが政治を家計の延長として理解できるようにしたいし、同時に、子どもたちにも「選挙って何のためにあるのか」「投票しないという選択も、実は"選んでいる"こと」を、分かりやすく伝えたいと思っています。</p>
-            <p>政治がどうだ、国がどうだと言う前に、今の政治は「行った人」「行かなかった人」その全員の結果でできている。だったら、最初から「自分ごと」として知っていた方がいい。最初から「参加できるもの」として育っていた方がいい。</p>
-            <p>私は、政治を教えたいわけでも、思想を押し付けたいわけでもありません。ただ、「自分で街をつくれる可能性がある」「その入り口が一票なんだ」という感覚を、大人にも、子どもにも、渡したいだけです。</p>
-            <p>その積み重ねの先に、糸島市が「投票率が高いまち」ではなく、「自分たちで考え、選び、動くまち」として育っていくと考えます。</p>
-          </div>
-          <div class="about-signature">
-            <span class="about-org">みんなの選挙糸島</span>
-            <span class="about-name">代表　松田 一葉</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <footer class="site-footer">
     <p class="footer-note">
