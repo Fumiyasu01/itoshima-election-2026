@@ -965,6 +965,7 @@
     <!-- 市長選セクション -->
     <section class="mayor-section">
       <h2 class="mayor-section-title">糸島市長選挙</h2>
+      <p style="text-align: center; font-size: 0.85rem; color: var(--text-mid); margin-bottom: 1rem;">※公平性のため、表示順は毎回ランダムです</p>
       <div class="mayor-grid">
         <!-- 月形ゆうじ（現職） -->
         <article class="mayor-card">
@@ -1131,6 +1132,7 @@
         <h2 class="section-title">立候補予定者一覧</h2>
         <span class="candidates-count" id="candidatesCount"></span>
       </div>
+      <p style="font-size: 0.85rem; color: var(--text-mid); margin-bottom: 1rem;">※公平性のため、表示順は毎回ランダムです</p>
       <div class="candidates-grid" id="candidatesGrid"></div>
     </section>
   </main>
@@ -1176,7 +1178,7 @@
   </div>
 
   <script>
-    const candidates = [
+    let candidates = [
       {
         id: 1,
         name: "松﨑 由美子",
@@ -1381,7 +1383,29 @@
       leadership: { left: '調整型', right: '突破型', question: '議会や行政運営のスタイルは？' }
     };
 
+    // シャッフル関数
+    function shuffleArray(array) {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    // 市長カードをシャッフル
+    function shuffleMayorCards() {
+      const mayorGrid = document.querySelector('.mayor-grid');
+      const cards = Array.from(mayorGrid.children);
+      const shuffledCards = shuffleArray(cards);
+      shuffledCards.forEach(card => mayorGrid.appendChild(card));
+    }
+
     function init() {
+      // 候補者配列をシャッフル
+      candidates = shuffleArray(candidates);
+      // 市長カードをシャッフル
+      shuffleMayorCards();
       renderCandidates();
       setupFilterListeners();
       setupCompareListeners();
