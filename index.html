@@ -288,6 +288,8 @@
       box-shadow: var(--shadow-soft);
       transition: all 0.3s ease;
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
 
     .candidate-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
@@ -398,7 +400,7 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
 
-    .card-content { padding: 1.25rem 1.5rem; }
+    .card-content { padding: 1.25rem 1.5rem; flex: 1; }
     .content-section { margin-bottom: 1rem; }
     .content-section:last-child { margin-bottom: 0; }
 
