@@ -339,7 +339,16 @@
     .party-rikken { background: #d4edda; color: #155724; }
     .party-sansei { background: #f8d7da; color: #721c24; }
 
-    .candidate-hashtags { font-size: 0.8rem; color: var(--ocean-mid); line-height: 1.5; }
+    .candidate-hashtags {
+      font-size: 0.8rem;
+      color: var(--ocean-mid);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 2.4em;
+    }
 
     .card-compare-btn {
       position: absolute;
